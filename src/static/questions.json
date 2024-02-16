@@ -651,7 +651,7 @@
       {
         "content": " na wszystkich węzłach sieci X",
         "isCorrect": false,
-        "explanation": ""
+        "explanation": "SNAT (ang. Source Network Address Translation) jest mechanizmem translacji adresów IP, który służy do udostępniania Internetu w sieci wewnętrznej z adresami prywatnymi. Mechanizm ten działa na routerze, a nie na wszystkich węzłach sieci."
       }
     ]
   },
