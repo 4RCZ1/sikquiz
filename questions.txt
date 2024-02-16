@@ -1,0 +1,246 @@
+Które zdania o protokole TCP są prawdziwe:
++ "ack number" w segm z flagą ACK oznacza pierwszy bajt za potwierdzonym ciągiem bajtów które przysłano wcześniej,
++ jeden komunikat ACK może potwierdzić więcej niż jeden segment danych,
+- flagi SYN i FIN służą do potwierdzania segm danych
+(SYN/FIN - nawiązywanie i zamykanie połączenia TCP),
+- nawiązanie połączenia TCP wymaga wysłania 5 komunikatów
+Protokół UDP ma następujące cechy
++ komunikaty udp mogą się gubić w czasie wędrówki przez sieci
++ jest możliwy multicasting z użyciem tego protokołu
+- komunikaty udp mają ograniczenie długości do 1500 bajtów
+- połączenie tworzone przez UDP może zmniejszyć przepustowość (jest to mechanizm wbudowany w ten protokół)
+Sieć fizyczna A ma nr. 192.168.1.0 (maska 255.255.255.0);
+adr1 = 192.168.1.1 adr2=192.168.2.2 adr3=192.168.1.5
+wymień które spośród podanych adresów należą do sieci A
++ adr1 (192.168.1.1) i adr3 (192.168.1.5)
+Który z podanych adresów jest adresem IP?
++ 192.168.1.55
+- 08:9E:01:1C:9C:70
+- wp.pl
+Polecenie ping wysyła komunikaty protokołu ICMP. Które zdania o tych komunikatach są prawdziwe?
++ są umieszczane bezpośrednio w danych pakietu ip,
+- są umieszczane bezpośrednio w danych ramki ethernet,
+- są wysyłane za pomocą prot TCP
+Routing w znaczeniu modyfikowania tablicy routingowej. Które zdania są prawdziwe
++ Tablica routingowa AS (bez MPLS) pochodzi od routingu wewnętrznego i zewnętrznego,
++ AS to intersieć, pod tym samym zarządem z tym samym algorytmem routingu wewnętrznego,
++ AS-em (Systemem Autonomicznym) może zarządzać dostawca internetu (ISP)
++ określenie algorytmu routingu "wektor ścieżki" odnosi się do BGP-4
++ OSPF jest algorytmem typu LS (wewn tzw. obszarów)
++ algorytm routingu, w którym węzeł wymienia się z sąsiadami tablicę zawierającą odległości do innych węzłów nazywamy routingiem DV (Distance Vector)
++ algorytm routingu typu DV zauważa zmiany w sieci po pewnym czasie
+- System autonomiczny (AS) to zawsze pojedyncza sieć fizyczna,
+- Tablica routingowa AS (bez MPLS) pochodzi wyłącznie od routingu zewnętrznego
+- BGP-4 i EGP to protokoły routingu wewnętrznego (tzn. działają wyłącznie w pojedynczym AS)
+- informacja jak się dostać do sieci innej niż mój AS pochodzi od routingu wewnętrznego
+- algorytm routingu, w którym węzeł wymienia z sąsiadami tablicę zawierającą odległości do innych węzłów nazywamy routingiem LS (Link State, "stanu łącza")
+Protokół TCP broni się przed przeciążeniem routerów i utratą pakietów następującymi metodami:
++ szacuje czas po którym należy się spodziewać potwierdzenia pakietu (ACK) aby zbyt wcześnie nie uznać pakietu za stracony,
++ potwierdza segmenty danych przy pomocy komunikatu ACK,
++ zmienia rozmiar okna (sliding window) z którego wysyłane są segmenty danych,
+- stawia ograniczenie ilości danych które można przesłać przez połączenie TCP,
+- zadaje użytkownikowi pytanie przy tworzeniu połączenia TCP ile bitów na sek będzie maksymalnie wysyłał
+Multimedia w internecie:
++ filmy zapisane w pliku można udostępniać przez protokół HTTPS (np. z Content-Type=video/mpeg w odpowiedzi)
++ "fluktuacje" oznacza, że datagramy z np. danymi audio przychodzą w niewłaściwej kolejności
++ prot. RTP moze byc uzywany z multicastingiem
+- RTCP to starsza wersja prot RTP
+- nagłówek pakietu RTP zawiera "sequence number", który pozwala bronić się przed zbyt dużym rozmiarem klatek filmowych.
+(RTP może działać w trybie multicastingu „1 do wielu” lub unicastingu. Używane przez app multimedialne, np. voip (SIP/RTP, H.323), vic/vat,  …, NIE zapewnia QoS, ale pozwala naprawić fluktuacje itp)
+- RTP i RTCP zapewniają jakość połączeń przypominająca ta spotykana w ATM/AAL1
+- multicasting (w przeciwieństwie do unicastingu) pozwala odbierać datagramy UDP od wielu nadawców
+- multicasting pozwala wysyłać segmenty TCP do wielu odbiorców jednocześnie
+- przyczyną dla której interaktywne multimedia często wykorzystują UDP (a nie TCP) jest fakt że port UDP gubi pakiety a to jest bardzo przydatne w przypadku multimediów
+Otrzymaliśmy publiczny (globalny) nr sieci klasy C. Chcemy nadać publiczne adresy IP maszynom z naszych sieci fizycznych. Każda sieć ma co najwyżej 13 maszyn. Jak musi wyglądać maska w tych sieciach aby obsłużyć jak najwięcej sieci.
++ 255.255.255.240 (https://www.pawprint.net/designresources/netmask-converter.php)
+- 255.255.255.248, 255.255.255.224, 255.255.255.0
+Otrzymaliśmy jeden publiczny, globalny nr sieci klasy C. Chcemy nadać publiczne adresy ip maszynom z naszych sieci fizycznych. Każda nasza sieć ma 7 maszyn. Jaka jest maksymalna liczba sieci które możemy obsłużyć.
++ 16
+- 8, 32, 64
+Jak odróżnić adres ip multicastowy od adresu klasy A/B/C?
++ po początkowych bitach 1 bajtu adresu (od lewej)
+- po liczbie "0" i "1" w całym adresie
+- po masce
+Routing w znaczeniu modyfikowania tablicy routingowej. Używamy algorytmu DV, połączenia mają wagę=1. Węzeł A ma sąsiadów B1 i B2. Węzeł A wie że odległość A-C via B1 wynosi 10. Nagle dowiaduje się od sąsiada B2 że odległość B2-C to 8. Które zachowanie jest prawidłowe
++ A zmienia trasę do C na "via B2" z metryką = 9
+- A zmienia metrykę A-C na 9 z pozostawieniem "via B1"
+- niczego nie zmienia
+Routing w znaczeniu modyfikowania tablicy routingowej. Używamy algorytmu DV, połączenia mają wagę=1. Węzeł A ma sąsiadów B1 i B2. Węzeł A wie że odległość A-C via B1 wynosi 10. Nagle dowiaduje się od sąsiada B2 że odległość B2-C to 11. Które zachowanie jest prawidłowe:
++ A niczego nie zmienia
+- A zmienia metrykę A-C na 9 z pozostawieniem "via B1"
+- A zmienia trasę do C na "via B2" z metryką = 9
+Host X1 jest podłączony do sieci A, host X2 jest podłączony do sieci A, host Y jest podłączony do sieci B, istnieje router R łączący sieci A i B, w tablicach routingowych są wpisy dla sieci bliskich, host Y ma "default gw" ustawiony na R; co muszę zrobić aby było możliwe pingowanie z X1 do Y?
++ ustawić default gateway hosta X1 na R
+- nic nie muszę robić
+- w tablicy routingowej hosta Y dodać wiersz który będzie kierował pakiety przeznaczone do sieci A do routera R
+
+
+Telekomunikacja, sieci WAN. Sieć z "przełączaniem obwodów" ma następujące cechy
++ może się nie zgodzić na połączenie jeśli brakuje zasobów
++ gwarantuje pewne cechy połączenia (np. przepustowość)
+- przykładem takiej sieci jest ethernet (skrętka + switch)
+- przykładem takiej sieci jest wi-fi
+Telekomunikacja, sieci WAN
++ warstwa adaptacji AAL1 w sieci ATM pozwala tworzyć połączenia z silnymi gwarancjami jakości
++ VPI/VCI to etykiety w komórce ATM, które są używane przez switch-e ATM przy podejmowaniu decyzji gdzie przekazać komórkę
++ protokół PPP pozwala przenosić pakiety IP (a także LCP i NCP) nad łączem szeregowym rs232 lub czymś co je przypomina
++ w sieci SDH można multipleksować wiele rozmów telefonicznych (zakodowanych cyfrowo) na jednym światłowodzie
++ etykiety VPI/VCI zmieniają się gdy komórka ATM przeskakuje przez switche ATM.
++ VPI/VCI to etykiety w komórce ATM, które są używane przez switch-e ATM przy podejmowaniu decyzji gdzie przekazać komórkę
++ klasyczna sieć telefoniczna, POTS, to sieć z przełączaniem obwodów
+- warstwa adaptacji AAL5 w sieci ATM pozwala tworzyć połączenia z silnymi gwarancjami jakości (inaczej niż w Internecie gdzie mamy "best effort")
+- w sieci SONET/SDH litera H oznacza "hierarchię" słowo to oznacza że organizacja zarządzająca siecią SDH ma hierarchiczną strukturę
+- rozmowy telefoniczne przesyła się cyfrowo metodą PCM, 64 kbs, 1 bajt na próbkę; liczba 64 bierze się stąd że w skrętce światłowodowej jest 8 przewodów
+- switch-e ATM podejmują decyzję co dalej z pakietem na podstawie docelowego adresu ip w komórce ATM
+- klasyczna sieć telefoniczna, POTS, to sieć pakietowa / datagramowa
+Na jakiej podstawie router Tcp/Ip (bez MPLS!) podejmuje decyzje do jakiej maszyny przekazać pakiet
++ adres ip docelowy
+- nr portu docelowy
+- nr portu źródłowy
+- adres ip źródłowy
+W gniazdach BSD w połączeniach TCP po stronie serwera używa się m.in funkcji:
++ read(), write(), close(), listen(), accept(), bind()
+Gniazdka BSD: mamy połączenie TCP między klientem a serwerem;
+klient zamyka swoje gniazdko przy pomocy close ();
+jak ten fakt jest sygnalizowany serwerowi?
++ sygnalizuje się EOF, czyli “koniec pliku” na gniazdku serwera służącym do rozmowy z klientem
+- do procesu serwera jest wysyłany sygnał SIGEOF,
+- w ogóle nic się nie dzieje
+Które protokoły służą do przesyłania maili, chodzi o przesyłanie pomiędzy MUA a serwerem mailowym
++ SMTP
+- IMAP, FTP, HTTPS, POP3, SNMP, DNS
+Który protokół/usługa służy do zamiany nazw domenowych na adresy IP:
++ DNS
+- POP3, SNMP, POP3, FTP
+Wysyłamy maila z załącznikiem. Treść tego maila jest utworzona przy pomocy:
++ MIME
+- SMTP, POP3, IMAP
+Nazwy postaci "cn=Jan Kowalski, ou=Sales, o=Acme, st=Wielkopolska c=PL" występują w usługach
++ usłudze katalogowej, X.500 LDAP
+- nagłówkach HTTP
+- w certyfikatach SSL
+- FTP
+Sieć fizyczna wifi. Zaznacz poprawne zdania
++ specyfikacja IEEE dotycząca wifi to 802.11
++ ESS składa się z wielu BSS-ów połączonych systemem dystrybucji (np. eth)
+- adres sprzętowy wifi ma więcej bajtów niż adr sprzętowy eth (oba 6B)
+- ramka wifi ma zawsze dwa adresy sprzętowe
+Zaznacz wszystkie poprawne zdania dotyczące sieci wifi:
++ Mechanizm RTS/CTS wifi nie jest obowiązkowy (może zależeć od długości ramki)
++ Wektor NAV (pole Duration) określa jak długo dana stacja będzie nadawać ramkę z danymi
+- Podwarstwa MAC sieci wifi, CSMA/CA, wykrywa w czasie nadawania czy inna stacja nadaje
+- Wektor NAV (pole Duration) określa jak długo stacja wifi będzie włączona
+Mechanizm SNAT (mający udostępnić internet w sieci wewnętrznej X, z adresami prywatnymi) jest wykonywany
++ na routerze sieci X
+- na wszystkich węzłach sieci X
+Zaznacz zdania prawdziwe na temat tzw. ciasteczek w protokole HTTP
++ ciasteczko jest przesyłane od klienta do serwera przy pomocy nagłówka Cookie
++ ciasteczka definiuje serwer http nagłówkiem Set-Cookie
+- ciasteczko jest przesyłane od serwera do klienta przy pomocy nagłówka Cookie
+- ciasteczka definiuje klient http nagłówkiem Set-Cookie
+Które polecenie pozwala "ręcznie" ustalić IP adresu sieciowego?
++ ifconfig
+- route, ping, dhcpcd, traceroute
+Które polecenie pozwala modyfikować tablicę routingową? (chodzi o modyfikacje “sieci dalekich”, czyli tych do których NIE jesteśmy podłączeni):
++ route
+- ifconfig, traceroute, ping, dhcpcd
+Numery portów w protokołach Tcp/Ip służą do:
++ rozróżniania procesów na jednej maszynie
+- numerowania pakietów wysyłanych przez sieć
+- to deskryptory oznaczające koniec połączenia TCP (gniazdko)
+Mamy 3 sieci fizyczne połączone routerem R. Wszystkie maszyny mają wpis dla sieci bliskich (do których są podłączone) w swojej tabl routingowej. Nie-routery mają "default gw" ustawiony na R. Aby była możliwa komunikacja z każdym konieczne jest.
++ nic więcej nie trzeba robić
+- każda maszyna (nie router) musi mieć w swojej tablicy routingowej wpisy dotyczące pozostałych 2 sieci fizycznych (że pakiety do nich przekazywane muszą trafić do R)
+- dodanie do tablicy routingowej R wpisów dotyczących 3 sieci fizycznych
+Co się stanie jeśli datagram UDP o długości 10000 bajtów wysyłamy w sieci fizycznej, która używa ramek o maks. 1500 bajtów. Zaznacz właściwą odpowiedź:
++ następuje fragmentacja (podział pakietu IP na kawałki które się mieszczą w danych ramki
+- tutaj można używać tylko prot TCP, w którym segmenty zazwyczaj mają długość <=1500
+- nie da się wysłać takiego datagramu
+
+
+Które zdanie jest prawdziwe:
++ w ethernecie na kablu koncentrycznym, domena kolizyjna = domena rozgłoszeniowa
++ tłumienie nadawcy, gdy switch nie jest wstanie wysłać ramek, robi się przy pomocy ramek PAUSE lub (dawniej ) przy pomocy wymuszania kolizji
+- w nowoczesnym ethernecie, na skrętce i switchach, domena kolizyjna = domena rozgłoszeniowa (broadcasting eth)
+- tłumienie nadawcy, gdy switch nie jest w stanie wysłać ramek, robi się przy pomocy odłączania kabla stacji wysyłającej zbyt dużo ramek
+Które zdanie jest prawdziwe - SNMP/DHCP:
++ "dhcpcd" to serwer usługi DHCP na komputerach z linuxem
+- DHCP w trybie "leasing" przydziela adres ip zawsze na dokładnie 30min)
+- agent SNMP utrzymuje pewne zmienne na urządzeniu sieciowym, zmienne te opisują urządzenie, nazwy tych zmiennych to ścieżki w "drzewie MIB", od korzenia do liścia
+- SNMP to protokół do wysyłania maili
+Które zdanie jest prawdziwe (Lub poprawny adres) - Protokół IPv6 (3):
++ adresy ipv6 maja po 128 bitów
++ "2002:c0a8:3::" = "2002:c0a8:0003:0000:0000:0000:0000:0000"
+- adr ipv4 można zawsze utworzyć na podstawie adr ipv6
+- adr ipv6 można utworzyc na podstawie adr ethernet
+- nagłówek pakietu IPv6 zawiera 4 adresy ipv6
+- "2002:c0a8:103::0a0a::" = "2002:c0a8:0103:0000:0000:0a0a:0000:0000"
+- "::1" to odpowiednik 127.0.0.1
+- adresy ipv6 wprowadzono bo adresy ipv4 zajmują zbyt wiele miejsca w pamięci
+Mechanizm SNAT (mający udostępnić internet w sieci wewnętrznej X, z adresami prywatnymi) jest wykonywany
++ na routerze w sieci X
+- na wszystkich węzłach sieci X
+- na nie-routerze czyli zwykłym węźle sieci
+Sieć fizyczna Ethernet. Zaznacz prawidłowe zdania:
++ MAC w eth na kablu koncentrycznym to CSMA/CD
++ typ ramki eth jest umieszczany w polu 2 bajtowym za źródłowym adresem lub w nagłówku 802.2 w danych ramki
++ podczas nadawanie ramki eth w kablu koncentrycznym wykrywa się kolizje (czyli sytuację, w której inna stacja takze nadaje)
++ adres sprzętowy w eth ma długość 6 bajtów
+- warstwa 2 (OSI) dzieli się na 3 podwarstwy LLC, MAC, QAM
+- LLC, jako podwarstwa warstwy 2 (OSI) oznacza  "Low Level Communication"
+- dostęp do medium w eth (kabel koncentryczny) odbywa sie metoda FDMA
+- 100BASE-TX to sieć ethernet o przepustowości 1Gb/s
+Dlaczego sieć ethernet zbudowana na skrętce i switch-ach eth powinna być drzewem (przynajmniej w prostych sieciach):
++ aby łatwiej było zrealizować “broadcasting” (np. gdy nie wiadomo gdzie posłać ramkę), pozwala to też uniknąć ramek krążących w nieskończoność po cyklach w sieci
+- bo w nie-drzewie trudniej się rozwiązuje problemy grafowe
+- bo drzewo było ulubioną strukturą danych twórcy eth, p. Metcalfe,
+W protokole HTTP nagłówki (np. “Content-Type”) i dane w odpowiedzi http oddziela:
++ pusta linia
+- liczba nagłówków jest podana w pierwszej linii
+- specjalny nagłówek końcowy
+Zaznacz prawdziwe zdania o protokole HTTP::
++ Content-Type to nagłówek służacy m.in do określenia typu odpowiedzi http
++ GET,POST,HEAD to popularne metody używane w 1 lini żądania http
+- Typ odpowiedzi http poznajemy po 3 słowie w 1 lini odpowiedzi http
+- http nie może zwracać danych binarnych(przeciwieństwo tekstowych)
+Jakie urządzenie sieciowe łączy sieci fizyczne w intersieci?
++ router
+- switch eth, modem, wzmacniacz/repeater
+
+
+Mamy dwa urządzenia sieciowe, router i switch (ethernetowy)
++ ramka ethernetowa jest umieszczana w danych pakietu ip
++ router wykorzystuje informacje o nagłówku pakietu ip (i podejmuje decyzje co dalej z pakietem)
++ pakiet ip jest umieszczany w danych ramki ethernetowej
+- switch eth podejmuje decyzje gdzie przekazać ramkę eth na podstawie adresu ip
+- router wykorzystuje informacje o nagłówku ramki ethernetowej (i podejmuje decyzje co dalej z ramka)
+(router działa na IP, switch działa na eth)
+
+
+Protokół UPnP:
++ upnp wykrywa "urządzenia upnp" przy pomocy broadcastingu
++ upnp teoretycznie może wykrywać urządzenia w intersieci wewnętrznej (intranecie), a nie tylko w 1 sieci fizycznej
++ włączenie upnp w domowym routerze naraża nas na niebezpieczeństwo, że złośliwy program będzie mógł konfigurować DNAT na tym routerze
+- upnp wykrywa "urządzenia upnp" przy pomocy multicastingu
+Zabezpieczenia sieci
++ SSL/TLS to prot działający nad połączeniem TCP
+- wep, wpa/wpa2 to zabezpieczenie sieci ethernet
+- IPsec zawiera nagłówki AH i ESP, umieszczane za nagłówkiem ip, a przed nagłówikiem tcp/udp (WSZYSTKO JEST ZA NAGLOWKIEM IP)
+- prot PPP może działać nad poł TCP + SSL
+Iproute2 w Linuxie. Które zdania są prawdziwe
++ dyscyplina kolejkowa pfifo_fast używa pola TOS w nagłówku pakietu ip do swoich celów
++ tunel GRE może służyć do przenoszenia ipv6 przez sieci ipv4
++ pole TOS w nagłówku pakietu ip ustawia się  funkcją gniazdek "setsockopt()"
++ tunel IPsec może utworzyć przy pomocy iproute2
++ qdisc, czyli dyscyplina kolejkowa, to mechanizm , który powoduje że różne pakiety są lepiej lub gorzej traktowane przez router (np. pkg klasy "ekonomicznej" są częsciej gubione , niż klasy "biznesowej ")
+- dyscyplina kolejkowa pfifo_fast używa żródłowego adresu ip do swoich celów
+- pole TOS w nagłówku pakietu ip ustawia się  funkcją gniazdek "bind()"
+- qdisc, czyli dyscyplina kolejkowa, to definicja dzialania prot TCP
+Zaznacz zdania prawdziwe na temat usługi DNS: Wybierz wszystkie poprawne
++ jeśli usługa DNS szuka serwera DNS obsługującego domenę "qqq.amu.edu.pl" to w pewnym momencie zapyta serwer obsługujący domenę "pl" o adres serwera obsługującego domene "edu.pl"
++ usługa DNS przechowuje wyłącznie adresy ip odpowiadające nazwom domenowym
++ wpis typu MX w tablicy rekordów DNS oznacza serwer mailowy (MTA) w domenie
+- wpis typu NS w tablicy rekordów DNS oznacza serwer FTP w domenie
+- jeśli usługa DNS szuka serwera DNS obsługującego domenę "qqq.amu.edu.pl" to w pewnym momencie zapyta serwer obslugujący domenę "edu.pl" o adres serwera obsługującego domene "pl"
+
+

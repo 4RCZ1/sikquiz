@@ -1,0 +1,1183 @@
+[
+  {
+    "question": "Które zdania o protokole TCP są prawdziwe:",
+    "answers": [
+      {
+        "content": " \"ack number\" w segm z flagą ACK oznacza pierwszy bajt za potwierdzonym ciągiem bajtów które przysłano wcześniej,",
+        "isCorrect": true,
+        "explanation": "(ack number - numer potwierdzanego bajtu),"
+
+      },
+      {
+        "content": " jeden komunikat ACK może potwierdzić więcej niż jeden segment danych,",
+        "isCorrect": true,
+        "explanation": " "
+      },
+      {
+        "content": " flagi SYN i FIN służą do potwierdzania segm danych",
+        "isCorrect": false,
+        "explanation": "(SYN/FIN - nawiązywanie i zamykanie połączenia TCP),"
+      },
+      {
+        "content": " nawiązanie połączenia TCP wymaga wysłania 5 komunikatów",
+        "isCorrect": false,
+        "explanation": "Wymaga 3 sygnałów: SYN, SYN-ACK, ACK"
+      }
+    ]
+  },
+  {
+    "question": "Protokół UDP ma następujące cechy",
+    "answers": [
+      {
+        "content": " komunikaty udp mogą się gubić w czasie wędrówki przez sieci",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " jest możliwy multicasting z użyciem tego protokołu",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " komunikaty udp mają ograniczenie długości do 1500 bajtów",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " połączenie tworzone przez UDP może zmniejszyć przepustowość (jest to mechanizm wbudowany w ten protokół)",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Sieć fizyczna A ma nr. 192.168.1.0 (maska 255.255.255.0); wymień które spośród podanych adresów należą do sieci A",
+    "answers": [
+      {
+        "content": "adr1 (192.168.1.1)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": "adr2 (192.168.2.2)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": "adr3 (192.168.1.5)",
+        "isCorrect": true,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Który z podanych adresów jest adresem IP?",
+    "answers": [
+      {
+        "content": " 192.168.1.55",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " 08:9E:01:1C:9C:70",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " wp.pl",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Polecenie ping wysyła komunikaty protokołu ICMP. Które zdania o tych komunikatach są prawdziwe?",
+    "answers": [
+      {
+        "content": " są umieszczane bezpośrednio w danych pakietu ip,",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " są umieszczane bezpośrednio w danych ramki ethernet,",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " są wysyłane za pomocą prot TCP",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Routing w znaczeniu modyfikowania tablicy routingowej. Które zdania są prawdziwe",
+    "answers": [
+      {
+        "content": " Tablica routingowa AS (bez MPLS) pochodzi od routingu wewnętrznego i zewnętrznego,",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " AS to intersieć, pod tym samym zarządem z tym samym algorytmem routingu wewnętrznego,",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " AS-em (Systemem Autonomicznym) może zarządzać dostawca internetu (ISP)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " określenie algorytmu routingu \"wektor ścieżki\" odnosi się do BGP-4",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " OSPF jest algorytmem typu LS (wewn tzw. obszarów)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " algorytm routingu, w którym węzeł wymienia się z sąsiadami tablicę zawierającą odległości do innych węzłów nazywamy routingiem DV (Distance Vector)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " algorytm routingu typu DV zauważa zmiany w sieci po pewnym czasie",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " System autonomiczny (AS) to zawsze pojedyncza sieć fizyczna,",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " Tablica routingowa AS (bez MPLS) pochodzi wyłącznie od routingu zewnętrznego",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " BGP-4 i EGP to protokoły routingu wewnętrznego (tzn. działają wyłącznie w pojedynczym AS)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " informacja jak się dostać do sieci innej niż mój AS pochodzi od routingu wewnętrznego",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " algorytm routingu, w którym węzeł wymienia z sąsiadami tablicę zawierającą odległości do innych węzłów nazywamy routingiem LS (Link State, \"stanu łącza\")",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Protokół TCP broni się przed przeciążeniem routerów i utratą pakietów następującymi metodami:",
+    "answers": [
+      {
+        "content": " szacuje czas po którym należy się spodziewać potwierdzenia pakietu (ACK) aby zbyt wcześnie nie uznać pakietu za stracony,",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " potwierdza segmenty danych przy pomocy komunikatu ACK,",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " zmienia rozmiar okna (sliding window) z którego wysyłane są segmenty danych,",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " stawia ograniczenie ilości danych które można przesłać przez połączenie TCP,",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " zadaje użytkownikowi pytanie przy tworzeniu połączenia TCP ile bitów na sek będzie maksymalnie wysyłał",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Multimedia w internecie:",
+    "answers": [
+      {
+        "content": " filmy zapisane w pliku można udostępniać przez protokół HTTPS (np. z Content-Type=video/mpeg w odpowiedzi)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " \"fluktuacje\" oznacza, że datagramy z np. danymi audio przychodzą w niewłaściwej kolejności",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " prot. RTP moze byc uzywany z multicastingiem",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " RTCP to starsza wersja prot RTP",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " nagłówek pakietu RTP zawiera \"sequence number\", który pozwala bronić się przed zbyt dużym rozmiarem klatek filmowych.",
+        "isCorrect": false,
+        "explanation": "(RTP może działać w trybie multicastingu „1 do wielu” lub unicastingu. Używane przez app multimedialne, np. voip (SIP/RTP, H.323), vic/vat,  …, NIE zapewnia QoS, ale pozwala naprawić fluktuacje itp)"
+      },
+      {
+        "content": " RTP i RTCP zapewniają jakość połączeń przypominająca ta spotykana w ATM/AAL1",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " multicasting (w przeciwieństwie do unicastingu) pozwala odbierać datagramy UDP od wielu nadawców",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " multicasting pozwala wysyłać segmenty TCP do wielu odbiorców jednocześnie",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " przyczyną dla której interaktywne multimedia często wykorzystują UDP (a nie TCP) jest fakt że port UDP gubi pakiety a to jest bardzo przydatne w przypadku multimediów",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Otrzymaliśmy publiczny (globalny) nr sieci klasy C. Chcemy nadać publiczne adresy IP maszynom z naszych sieci fizycznych. Każda sieć ma co najwyżej 13 maszyn. Jak musi wyglądać maska w tych sieciach aby obsłużyć jak najwięcej sieci.",
+    "answers": [
+      {
+        "content": " 255.255.255.240 (https://www.pawprint.net/designresources/netmask-converter.php)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " 255.255.255.248, 255.255.255.224, 255.255.255.0",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Otrzymaliśmy jeden publiczny, globalny nr sieci klasy C. Chcemy nadać publiczne adresy ip maszynom z naszych sieci fizycznych. Każda nasza sieć ma 7 maszyn. Jaka jest maksymalna liczba sieci które możemy obsłużyć.",
+    "answers": [
+      {
+        "content": " 16",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " 8",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " 32",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": "64",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Jak odróżnić adres ip multicastowy od adresu klasy A/B/C?",
+    "answers": [
+      {
+        "content": " po początkowych bitach 1 bajtu adresu (od lewej)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " po liczbie \"0\" i \"1\" w całym adresie",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " po masce",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Routing w znaczeniu modyfikowania tablicy routingowej. Używamy algorytmu DV, połączenia mają wagę=1. Węzeł A ma sąsiadów B1 i B2. Węzeł A wie że odległość A-C via B1 wynosi 10. Nagle dowiaduje się od sąsiada B2 że odległość B2-C to 8. Które zachowanie jest prawidłowe",
+    "answers": [
+      {
+        "content": " A zmienia trasę do C na \"via B2\" z metryką = 9",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " A zmienia metrykę A-C na 9 z pozostawieniem \"via B1\"",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " niczego nie zmienia",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Routing w znaczeniu modyfikowania tablicy routingowej. Używamy algorytmu DV, połączenia mają wagę=1. Węzeł A ma sąsiadów B1 i B2. Węzeł A wie że odległość A-C via B1 wynosi 10. Nagle dowiaduje się od sąsiada B2 że odległość B2-C to 11. Które zachowanie jest prawidłowe:",
+    "answers": [
+      {
+        "content": " A niczego nie zmienia",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " A zmienia metrykę A-C na 9 z pozostawieniem \"via B1\"",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " A zmienia trasę do C na \"via B2\" z metryką = 9",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Host X1 jest podłączony do sieci A, host X2 jest podłączony do sieci A, host Y jest podłączony do sieci B, istnieje router R łączący sieci A i B, w tablicach routingowych są wpisy dla sieci bliskich, host Y ma \"default gw\" ustawiony na R; co muszę zrobić aby było możliwe pingowanie z X1 do Y?",
+    "answers": [
+      {
+        "content": " ustawić default gateway hosta X1 na R",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " nic nie muszę robić",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " w tablicy routingowej hosta Y dodać wiersz który będzie kierował pakiety przeznaczone do sieci A do routera R",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Telekomunikacja, sieci WAN. Sieć z \"przełączaniem obwodów\" ma następujące cechy",
+    "answers": [
+      {
+        "content": " może się nie zgodzić na połączenie jeśli brakuje zasobów",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " gwarantuje pewne cechy połączenia (np. przepustowość)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " przykładem takiej sieci jest ethernet (skrętka + switch)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " przykładem takiej sieci jest wi-fi",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Telekomunikacja, sieci WAN",
+    "answers": [
+      {
+        "content": " warstwa adaptacji AAL1 w sieci ATM pozwala tworzyć połączenia z silnymi gwarancjami jakości",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " VPI/VCI to etykiety w komórce ATM, które są używane przez switch-e ATM przy podejmowaniu decyzji gdzie przekazać komórkę",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " protokół PPP pozwala przenosić pakiety IP (a także LCP i NCP) nad łączem szeregowym rs232 lub czymś co je przypomina",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " w sieci SDH można multipleksować wiele rozmów telefonicznych (zakodowanych cyfrowo) na jednym światłowodzie",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " etykiety VPI/VCI zmieniają się gdy komórka ATM przeskakuje przez switche ATM.",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " VPI/VCI to etykiety w komórce ATM, które są używane przez switch-e ATM przy podejmowaniu decyzji gdzie przekazać komórkę",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " klasyczna sieć telefoniczna, POTS, to sieć z przełączaniem obwodów",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " warstwa adaptacji AAL5 w sieci ATM pozwala tworzyć połączenia z silnymi gwarancjami jakości (inaczej niż w Internecie gdzie mamy \"best effort\")",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " w sieci SONET/SDH litera H oznacza \"hierarchię\" słowo to oznacza że organizacja zarządzająca siecią SDH ma hierarchiczną strukturę",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " rozmowy telefoniczne przesyła się cyfrowo metodą PCM, 64 kbs, 1 bajt na próbkę; liczba 64 bierze się stąd że w skrętce światłowodowej jest 8 przewodów",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " switch-e ATM podejmują decyzję co dalej z pakietem na podstawie docelowego adresu ip w komórce ATM",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " klasyczna sieć telefoniczna, POTS, to sieć pakietowa / datagramowa",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Na jakiej podstawie router Tcp/Ip (bez MPLS!) podejmuje decyzje do jakiej maszyny przekazać pakiet",
+    "answers": [
+      {
+        "content": " adres ip docelowy",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " nr portu docelowy",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " nr portu źródłowy",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " adres ip źródłowy",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "W gniazdach BSD w połączeniach TCP po stronie serwera używa się m.in funkcji:",
+    "answers": [
+      {
+        "content": " read(), write(), close(), listen(), accept(), bind()",
+        "isCorrect": true,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Gniazdka BSD: mamy połączenie TCP między klientem a serwerem; klient zamyka swoje gniazdko przy pomocy close (); jak ten fakt jest sygnalizowany serwerowi?",
+    "answers": [
+      {
+        "content": " sygnalizuje się EOF, czyli “koniec pliku” na gniazdku serwera służącym do rozmowy z klientem",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " do procesu serwera jest wysyłany sygnał SIGEOF,",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " w ogóle nic się nie dzieje",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Które protokoły służą do przesyłania maili, chodzi o przesyłanie pomiędzy MUA a serwerem mailowym",
+    "answers": [
+      {
+        "content": " SMTP",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " IMAP, FTP, HTTPS, POP3, SNMP, DNS",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Który protokół/usługa służy do zamiany nazw domenowych na adresy IP:",
+    "answers": [
+      {
+        "content": " DNS",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " POP3, SNMP, POP3, FTP",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Wysyłamy maila z załącznikiem. Treść tego maila jest utworzona przy pomocy:",
+    "answers": [
+      {
+        "content": " MIME",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " SMTP, POP3, IMAP",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Nazwy postaci \"cn=Jan Kowalski, ou=Sales, o=Acme, st=Wielkopolska c=PL\" występują w usługach",
+    "answers": [
+      {
+        "content": " usłudze katalogowej, X.500 LDAP",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " nagłówkach HTTP",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " w certyfikatach SSL",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " FTP",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Sieć fizyczna wifi. Zaznacz poprawne zdania",
+    "answers": [
+      {
+        "content": " specyfikacja IEEE dotycząca wifi to 802.11",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " ESS składa się z wielu BSS-ów połączonych systemem dystrybucji (np. eth)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " adres sprzętowy wifi ma więcej bajtów niż adr sprzętowy eth (oba 6B)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " ramka wifi ma zawsze dwa adresy sprzętowe",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Zaznacz wszystkie poprawne zdania dotyczące sieci wifi:",
+    "answers": [
+      {
+        "content": " Mechanizm RTS/CTS wifi nie jest obowiązkowy (może zależeć od długości ramki)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " Wektor NAV (pole Duration) określa jak długo dana stacja będzie nadawać ramkę z danymi",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " Podwarstwa MAC sieci wifi, CSMA/CA, wykrywa w czasie nadawania czy inna stacja nadaje",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " Wektor NAV (pole Duration) określa jak długo stacja wifi będzie włączona",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Mechanizm SNAT (mający udostępnić internet w sieci wewnętrznej X, z adresami prywatnymi) jest wykonywany",
+    "answers": [
+      {
+        "content": " na routerze sieci X",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " na wszystkich węzłach sieci X",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Zaznacz zdania prawdziwe na temat tzw. ciasteczek w protokole HTTP",
+    "answers": [
+      {
+        "content": " ciasteczko jest przesyłane od klienta do serwera przy pomocy nagłówka Cookie",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " ciasteczka definiuje serwer http nagłówkiem Set-Cookie",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " ciasteczko jest przesyłane od serwera do klienta przy pomocy nagłówka Cookie",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " ciasteczka definiuje klient http nagłówkiem Set-Cookie",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Które polecenie pozwala \"ręcznie\" ustalić IP adresu sieciowego?",
+    "answers": [
+      {
+        "content": " ifconfig",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " route, ping, dhcpcd, traceroute",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Które polecenie pozwala modyfikować tablicę routingową? (chodzi o modyfikacje “sieci dalekich”, czyli tych do których NIE jesteśmy podłączeni):",
+    "answers": [
+      {
+        "content": " route",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " ifconfig",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": "traceroute",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " ping",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": "dhcpcd",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Numery portów w protokołach Tcp/Ip służą do:",
+    "answers": [
+      {
+        "content": " rozróżniania procesów na jednej maszynie",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " numerowania pakietów wysyłanych przez sieć",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " to deskryptory oznaczające koniec połączenia TCP (gniazdko)",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Mamy 3 sieci fizyczne połączone routerem R. Wszystkie maszyny mają wpis dla sieci bliskich (do których są podłączone) w swojej tabl routingowej. Nie-routery mają \"default gw\" ustawiony na R. Aby była możliwa komunikacja z każdym konieczne jest.",
+    "answers": [
+      {
+        "content": " nic więcej nie trzeba robić",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " każda maszyna (nie router) musi mieć w swojej tablicy routingowej wpisy dotyczące pozostałych 2 sieci fizycznych (że pakiety do nich przekazywane muszą trafić do R)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " dodanie do tablicy routingowej R wpisów dotyczących 3 sieci fizycznych",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Co się stanie jeśli datagram UDP o długości 10000 bajtów wysyłamy w sieci fizycznej, która używa ramek o maks. 1500 bajtów. Zaznacz właściwą odpowiedź:",
+    "answers": [
+      {
+        "content": " następuje fragmentacja (podział pakietu IP na kawałki które się mieszczą w danych ramki",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " tutaj można używać tylko prot TCP, w którym segmenty zazwyczaj mają długość <=1500",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " nie da się wysłać takiego datagramu",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Które zdanie jest prawdziwe:",
+    "answers": [
+      {
+        "content": " w ethernecie na kablu koncentrycznym, domena kolizyjna = domena rozgłoszeniowa",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " tłumienie nadawcy, gdy switch nie jest wstanie wysłać ramek, robi się przy pomocy ramek PAUSE lub (dawniej ) przy pomocy wymuszania kolizji",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " w nowoczesnym ethernecie, na skrętce i switchach, domena kolizyjna = domena rozgłoszeniowa (broadcasting eth)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " tłumienie nadawcy, gdy switch nie jest w stanie wysłać ramek, robi się przy pomocy odłączania kabla stacji wysyłającej zbyt dużo ramek",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Które zdanie jest prawdziwe - SNMP/DHCP:",
+    "answers": [
+      {
+        "content": " \"dhcpcd\" to serwer usługi DHCP na komputerach z linuxem",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " DHCP w trybie \"leasing\" przydziela adres ip zawsze na dokładnie 30min)",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " agent SNMP utrzymuje pewne zmienne na urządzeniu sieciowym, zmienne te opisują urządzenie, nazwy tych zmiennych to ścieżki w \"drzewie MIB\", od korzenia do liścia",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " SNMP to protokół do wysyłania maili",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Które zdanie jest prawdziwe (Lub poprawny adres) - Protokół IPv6 (3):",
+    "answers": [
+      {
+        "content": " adresy ipv6 maja po 128 bitów",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " \"2002:c0a8:3::\" = \"2002:c0a8:0003:0000:0000:0000:0000:0000\"",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " adr ipv4 można zawsze utworzyć na podstawie adr ipv6",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " adr ipv6 można utworzyc na podstawie adr ethernet",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " nagłówek pakietu IPv6 zawiera 4 adresy ipv6",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " \"2002:c0a8:103::0a0a::\" = \"2002:c0a8:0103:0000:0000:0a0a:0000:0000\"",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " \"::1\" to odpowiednik 127.0.0.1",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " adresy ipv6 wprowadzono bo adresy ipv4 zajmują zbyt wiele miejsca w pamięci",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Mechanizm SNAT (mający udostępnić internet w sieci wewnętrznej X, z adresami prywatnymi) jest wykonywany",
+    "answers": [
+      {
+        "content": " na routerze w sieci X",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " na wszystkich węzłach sieci X",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " na nie-routerze czyli zwykłym węźle sieci",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Sieć fizyczna Ethernet. Zaznacz prawidłowe zdania:",
+    "answers": [
+      {
+        "content": " MAC w eth na kablu koncentrycznym to CSMA/CD",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " typ ramki eth jest umieszczany w polu 2 bajtowym za źródłowym adresem lub w nagłówku 802.2 w danych ramki",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " podczas nadawanie ramki eth w kablu koncentrycznym wykrywa się kolizje (czyli sytuację, w której inna stacja takze nadaje)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " adres sprzętowy w eth ma długość 6 bajtów",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " warstwa 2 (OSI) dzieli się na 3 podwarstwy LLC, MAC, QAM",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " LLC, jako podwarstwa warstwy 2 (OSI) oznacza  \"Low Level Communication\"",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " dostęp do medium w eth (kabel koncentryczny) odbywa sie metoda FDMA",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " 100BASE-TX to sieć ethernet o przepustowości 1Gb/s",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Dlaczego sieć ethernet zbudowana na skrętce i switch-ach eth powinna być drzewem (przynajmniej w prostych sieciach):",
+    "answers": [
+      {
+        "content": " aby łatwiej było zrealizować “broadcasting” (np. gdy nie wiadomo gdzie posłać ramkę), pozwala to też uniknąć ramek krążących w nieskończoność po cyklach w sieci",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " bo w nie-drzewie trudniej się rozwiązuje problemy grafowe",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " bo drzewo było ulubioną strukturą danych twórcy eth, p. Metcalfe,",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "W protokole HTTP nagłówki (np. “Content-Type”) i dane w odpowiedzi http oddziela:",
+    "answers": [
+      {
+        "content": " pusta linia",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " liczba nagłówków jest podana w pierwszej linii",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " specjalny nagłówek końcowy",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Zaznacz prawdziwe zdania o protokole HTTP::",
+    "answers": [
+      {
+        "content": " Content-Type to nagłówek służacy m.in do określenia typu odpowiedzi http",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " GET,POST,HEAD to popularne metody używane w 1 lini żądania http",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " Typ odpowiedzi http poznajemy po 3 słowie w 1 lini odpowiedzi http",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " http nie może zwracać danych binarnych(przeciwieństwo tekstowych)",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Jakie urządzenie sieciowe łączy sieci fizyczne w intersieci?",
+    "answers": [
+      {
+        "content": " router",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " switch eth, modem, wzmacniacz/repeater",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Mamy dwa urządzenia sieciowe, router i switch (ethernetowy)",
+    "answers": [
+      {
+        "content": " ramka ethernetowa jest umieszczana w danych pakietu ip",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " router wykorzystuje informacje o nagłówku pakietu ip (i podejmuje decyzje co dalej z pakietem)",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " pakiet ip jest umieszczany w danych ramki ethernetowej",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " switch eth podejmuje decyzje gdzie przekazać ramkę eth na podstawie adresu ip",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " router wykorzystuje informacje o nagłówku ramki ethernetowej (i podejmuje decyzje co dalej z ramka)",
+        "isCorrect": false,
+        "explanation": "(router działa na IP, switch działa na eth)"
+      }
+    ]
+  },
+  {
+    "question": "Protokół UPnP:",
+    "answers": [
+      {
+        "content": " upnp wykrywa \"urządzenia upnp\" przy pomocy broadcastingu",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " upnp teoretycznie może wykrywać urządzenia w intersieci wewnętrznej (intranecie), a nie tylko w 1 sieci fizycznej",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " włączenie upnp w domowym routerze naraża nas na niebezpieczeństwo, że złośliwy program będzie mógł konfigurować DNAT na tym routerze",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " upnp wykrywa \"urządzenia upnp\" przy pomocy multicastingu",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Zabezpieczenia sieci",
+    "answers": [
+      {
+        "content": " SSL/TLS to prot działający nad połączeniem TCP",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " wep, wpa/wpa2 to zabezpieczenie sieci ethernet",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " IPsec zawiera nagłówki AH i ESP, umieszczane za nagłówkiem ip, a przed nagłówikiem tcp/udp",
+        "isCorrect": false,
+        "explanation": "WSZYSTKO JEST ZA NAGLOWKIEM IP"
+      },
+      {
+        "content": " prot PPP może działać nad poł TCP + SSL",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Iproute2 w Linuxie. Które zdania są prawdziwe",
+    "answers": [
+      {
+        "content": " dyscyplina kolejkowa pfifo_fast używa pola TOS w nagłówku pakietu ip do swoich celów",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " tunel GRE może służyć do przenoszenia ipv6 przez sieci ipv4",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " pole TOS w nagłówku pakietu ip ustawia się  funkcją gniazdek \"setsockopt()\"",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " tunel IPsec może utworzyć przy pomocy iproute2",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " qdisc, czyli dyscyplina kolejkowa, to mechanizm , który powoduje że różne pakiety są lepiej lub gorzej traktowane przez router (np. pkg klasy \"ekonomicznej\" są częsciej gubione , niż klasy \"biznesowej \")",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " dyscyplina kolejkowa pfifo_fast używa żródłowego adresu ip do swoich celów",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " pole TOS w nagłówku pakietu ip ustawia się  funkcją gniazdek \"bind()\"",
+        "isCorrect": false,
+        "explanation": ""
+      },
+      {
+        "content": " qdisc, czyli dyscyplina kolejkowa, to definicja dzialania prot TCP",
+        "isCorrect": false,
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "question": "Zaznacz zdania prawdziwe na temat usługi DNS: Wybierz wszystkie poprawne",
+    "answers": [
+      {
+        "content": " jeśli usługa DNS szuka serwera DNS obsługującego domenę \"qqq.amu.edu.pl\" to w pewnym momencie zapyta serwer obsługujący domenę \"pl\" o adres serwera obsługującego domene \"edu.pl\"",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " usługa DNS przechowuje wyłącznie adresy ip odpowiadające nazwom domenowym",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " wpis typu MX w tablicy rekordów DNS oznacza serwer mailowy (MTA) w domenie",
+        "isCorrect": true,
+        "explanation": ""
+      },
+      {
+        "content": " wpis typu NS w tablicy rekordów DNS oznacza serwer FTP w domenie",
+        "isCorrect": false,
+        "explanation": "NS: Wpis typu NS określa serwer nazw odpowiedzialny za daną domenę."
+      },
+      {
+        "content": " jeśli usługa DNS szuka serwera DNS obsługującego domenę \"qqq.amu.edu.pl\" to w pewnym momencie zapyta serwer obslugujący domenę \"edu.pl\" o adres serwera obsługującego domene \"pl\"",
+        "isCorrect": false,
+        "explanation": "Serwer DNS edu.pl nie ma wiedzy o domenie pl, ten serwer można zapytać o domenę amu.edu.pl"
+      }
+    ]
+  }
+]
